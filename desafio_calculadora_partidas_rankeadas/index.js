@@ -1,12 +1,15 @@
 let genderHero="m" //substitua por m ou f 
 let rank = ""
-// Crie uma função que recebe como parâmetro a quantidade de vitórias e derrotas de um jogador,
-// depois disso retorne o resultado para uma variável, o saldo de Rankeadas deve ser feito através do calculo (vitórias - derrotas)
+
+// Chamada da função 'balance' para calcular o saldo de vitórias e derrotas
 let res = balance(110, 5)
+
+// Função que calcula o saldo de vitórias
 function balance(numVict, numDefea){
     let calc = numVict - numDefea
     return calc
 }
+// Verifica o saldo e atribui um ranque baseado no resultado
 if (res < 10){
     rank = "Ferro"
 }
@@ -30,7 +33,7 @@ else if (res < 100){
     rank = "Lendário"
 }
 else {
-    rank = "Imortal"
+    rank = "Imortal" // Se o saldo for 100 ou mais, define o ranque como "Imortal"
 }
 
 if (genderHero.toUpperCase() === 'M') {
@@ -40,4 +43,3 @@ if (genderHero.toUpperCase() === 'M') {
 } else {
     console.log("Gênero inválido. Use 'M' para masculino ou 'F' para feminino.");
 }
-
